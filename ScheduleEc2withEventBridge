@@ -1,0 +1,19 @@
+Create rules that trigger your Lambda functions
+
+1.Open the Amazon Eventbridge page
+
+2.Click Create rule
+
+3.Add a name for the rule such as StartEC2Workday
+
+4. Do either of the following:
+For schedule , enter an interval of time in minutes, hours, or days.
+For Cron expression, enter an expression that tells Lambda when to stop your instances. For information on the syntax of expressions, see Schedule Expressions for Rules.
+Note: Cron expressions are evaluated in UTC. Be sure to adjust the expression for your preferred time zone.
+For my example I used 22 01 * * ? * where this calls the target function every day of the year at 01:20 UTC.
+
+5.    Under Targets, default target is added. 
+
+6.    Choose Lambda function and select the name of the function to use.
+
+7.   click Save
